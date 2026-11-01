@@ -1,0 +1,26 @@
+name: Verificar pacote
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Obter fonte
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Conferir Python
+        run: python3 --version
+      - name: Testar os scripts
+        run: python3 -m unittest discover -s tests -v
+      - name: Conferir fonte
+        run: python3 scripts/package_tools.py check
+      - name: Conferir ZIP e checksum
+        run: python3 scripts/package_tools.py verify

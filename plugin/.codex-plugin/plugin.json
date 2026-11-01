@@ -1,0 +1,31 @@
+{
+  "apps": "./.app.json",
+  "interface": {
+    "capabilities": [],
+    "category": "Security",
+    "defaultPrompt": [
+      "Revisar esta solução antes da homologação.",
+      "Preparar correções para reduzir exposição.",
+      "Comparar baseline e candidata com o Kraken."
+    ],
+    "developerName": "Carlos Felipe",
+    "displayName": "Radar Release Shield",
+    "longDescription": "Revisar soluções próprias ou autorizadas antes da homologação. Organizar evidências, distinguir componentes públicos e privados, priorizar correções, comparar versões e registrar risco residual. Inclui seis workflows de instruções e referências, com acesso GitHub dependente da conexão autorizada do usuário. O scanner Radar Release Guard é externo e opcional. Não inclui servidor MCP próprio, crawler, acesso a banco, proteção automática, REA instalado ou monitoramento contínuo. Não promete impedir toda engenharia reversa.",
+    "shortDescription": "Proteção antes da publicação"
+  },
+  "name": "radar-release-shield",
+  "version": "0.1.1",
+  "description": "Revisão assistida de exposição antes da homologação, com evidências, correções revisáveis e comparação autorizada de releases.",
+  "author": {
+    "name": "Carlos Felipe"
+  },
+  "keywords": [
+    "security",
+    "release",
+    "evidence",
+    "reverse-engineering",
+    "homologacao"
+  ],
+  "license": "MIT",
+  "skills": "./skills"
+}
